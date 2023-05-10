@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Swiper CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<title>Video Slide</title>
+</head>
+
+<body>
+	<style>
+		body {
+			height: 100vh;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 40px;
+
+		}
+
+		.swiper-container {
+			width: 360px;
+			height: 640px;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.swiper-slide {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.swiper-slide video {
+			width: 360px;
+			object-fit: cover;
+		}
+	</style>
+
+	<div class="swiper-container" id="style1">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<video src="1.mp4" muted autoplay loop preload="auto"></video>
+			</div>
+			<div class="swiper-slide">
+				<video src="2.mp4" muted autoplay loop preload="auto"></video>
+			</div>
+			<div class="swiper-slide">
+				<video src="3.mp4" muted autoplay loop preload="auto"></video>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script>
+		const mySwiper = new Swiper('#style1', {
+			loop: true,
+			speed: 1000,
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: false,
+			},
+		});
+
+	</script>
+
+
+	<div class="swiper-container" id="style2">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<video src="1.mp4" muted autoplay loop preload="auto"></video>
+			</div>
+			<div class="swiper-slide">
+				<video src="2.mp4" muted autoplay loop preload="auto"></video>
+			</div>
+			<div class="swiper-slide">
+				<video src="3.mp4" muted autoplay loop preload="auto"></video>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var swiper = new Swiper('#style2', {
+			loop: true,
+			speed: 5000,
+			autoplay: {
+				delay: 0,
+				disableOnInteraction: false,
+			},
+		});
+	</script>
+
+
+</body>
+
+</html>
