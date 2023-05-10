@@ -11,19 +11,20 @@
 
 <body>
 	<style>
-		body {
+		/* body {
 			height: 100vh;
 			margin: 0;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			gap: 40px;
-
 		}
 
 		.swiper-container {
-			width: 360px;
-			height: 640px;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+			max-width: 24rem;
+			max-height: 42rem;
 			overflow: hidden;
 			display: flex;
 			justify-content: center;
@@ -37,7 +38,32 @@
 		}
 
 		.swiper-slide video {
-			width: 360px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		} */
+
+		body {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		.swiper-slide {
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.swiper-slide img,
+		.swiper-slide video {
+			display: block;
+			width: 100vw;
+			height: 100vh;
 			object-fit: cover;
 		}
 	</style>
